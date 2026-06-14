@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Productos - HuertoHogar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  <!-- ===== HEADER (igual en todas las páginas) ===== -->
+  <header>
+    <nav>
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="img/logo.png" alt="Logo HuertoHogar" />
+          <span>HuertoHogar</span>
+        </a>
+      </div>
+
+      <ul class="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html" class="activo">Productos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blogs.html">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <div class="nav-acciones">
+        <a href="login.html">Iniciar sesión</a>
+        <a href="registro.html">Registrarse</a>
+        <a href="carrito.html">
+          🛒 <span id="contador-carrito">0</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- ===== MAIN ===== -->
+  <main>
+
+    <!-- TÍTULO DE SECCIÓN -->
+    <section class="encabezado-pagina">
+      <h1>Nuestros Productos</h1>
+      <p>Frescos, orgánicos y directamente del campo a tu hogar</p>
+    </section>
+
+    <!-- FILTROS POR CATEGORÍA -->
+    <section class="filtros">
+      <!-- 
+        Cada botón tiene data-categoria con el valor a filtrar.
+        El JS va a leer ese atributo para saber qué mostrar.
+        "todos" muestra el catálogo completo.
+      -->
+      <button class="btn-filtro activo" data-categoria="todos">Todos</button>
+      <button class="btn-filtro" data-categoria="verduras">Verduras</button>
+      <button class="btn-filtro" data-categoria="frutas">Frutas</button>
+      <button class="btn-filtro" data-categoria="hierbas">Hierbas</button>
+      <button class="btn-filtro" data-categoria="otros">Otros</button>
+    </section>
+
+    <!-- GRILLA DE PRODUCTOS -->
+    <section class="catalogo">
+      <!--
+        Este div es el contenedor donde el JS va a insertar las cards.
+        Empieza vacío — el JS lo rellena al cargar la página.
+      -->
+      <div id="contenedor-productos">
+        <!-- JS insertará las cards aquí -->
+      </div>
+
+      <!-- Mensaje que aparece si no hay productos en esa categoría -->
+      <p id="mensaje-vacio" style="display:none;">
+        No hay productos en esta categoría.
+      </p>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer>
+    <div class="footer-columnas">
+
+      <div class="footer-col">
+        <h4>HuertoHogar</h4>
+        <p>Conectamos el campo con tu hogar. Productos frescos y orgánicos para tu familia.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blogs.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p>📍 Santiago, Chile</p>
+        <p>📞 +56 9 1234 5678</p>
+        <p>✉️ contacto@huerthogar.cl</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 HuertoHogar. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="js/productos.js"></script>
+  <script src="js/carrito.js"></script>
+
+</body>
+</html>

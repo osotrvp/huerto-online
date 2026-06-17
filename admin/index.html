@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel Administrador - HuertoHogar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <!-- ../ porque styles.css está una carpeta más arriba -->
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body class="admin-body">
+
+  <!-- ===== LAYOUT ADMIN: SIDEBAR + CONTENIDO ===== -->
+  <div class="admin-layout">
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="admin-sidebar">
+
+      <!-- LOGO -->
+      <div class="admin-logo">
+        <img src="../img/logo.png" alt="Logo HuertoHogar" />
+        <span>HuertoHogar</span>
+      </div>
+
+      <!-- MENÚ VERTICAL -->
+      <nav class="admin-menu">
+        <ul>
+          <li><a href="index.html" class="activo">📊 Dashboard</a></li>
+          <li><a href="productos.html">🥦 Productos</a></li>
+          <li><a href="usuarios.html">👤 Usuarios</a></li>
+          <li><a href="../index.html">🔙 Volver al sitio</a></li>
+        </ul>
+      </nav>
+
+    </aside>
+
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <div class="admin-contenido">
+
+      <!-- HEADER SUPERIOR -->
+      <header class="admin-header">
+        <h1>Dashboard</h1>
+        <div class="admin-usuario">
+          <span>👋 Hola, Admin</span>
+        </div>
+      </header>
+
+      <!-- MAIN -->
+      <main class="admin-main">
+
+        <!-- TARJETAS DE RESUMEN -->
+        <section class="admin-cards-resumen">
+
+          <div class="admin-card">
+            <span class="admin-card-icono">🥦</span>
+            <div>
+              <!--
+                El JS rellena estos números contando los arrays
+                de productos y usuarios (.length).
+              -->
+              <strong id="total-productos">0</strong>
+              <p>Productos totales</p>
+            </div>
+          </div>
+
+          <div class="admin-card">
+            <span class="admin-card-icono">👤</span>
+            <div>
+              <strong id="total-usuarios">0</strong>
+              <p>Usuarios registrados</p>
+            </div>
+          </div>
+
+          <div class="admin-card">
+            <span class="admin-card-icono">⚠️</span>
+            <div>
+              <!--
+                El JS cuenta productos con stock bajo (ej: menor a 10)
+                filtrando el array.
+              -->
+              <strong id="stock-bajo">0</strong>
+              <p>Productos con stock bajo</p>
+            </div>
+          </div>
+
+          <div class="admin-card">
+            <span class="admin-card-icono">📦</span>
+            <div>
+              <strong id="total-categorias">0</strong>
+              <p>Categorías activas</p>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- TABLA: ÚLTIMOS PRODUCTOS AGREGADOS -->
+        <section class="admin-tabla-resumen">
+          <h2>Últimos productos agregados</h2>
+
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Categoría</th>
+                <th>Precio</th>
+                <th>Stock</th>
+              </tr>
+            </thead>
+            <!--
+              tbody vacío: el JS toma los últimos N productos
+              del array y genera una <tr> por cada uno.
+            -->
+            <tbody id="tabla-ultimos-productos">
+              <!-- JS insertará filas aquí -->
+            </tbody>
+          </table>
+
+          <a href="productos.html" class="btn-secundario">Ver todos los productos →</a>
+        </section>
+
+      </main>
+
+    </div>
+
+  </div>
+
+  <!-- Scripts: ../ porque están una carpeta arriba -->
+  <script src="../js/productos.js"></script>
+  <script src="js/admin-dashboard.js"></script>
+
+</body>
+</html>

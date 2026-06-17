@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestión de Usuarios - HuertoHogar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+
+<body class="admin-body">
+
+  <div class="admin-layout">
+
+    <!-- ===== SIDEBAR ===== -->
+    <aside class="admin-sidebar">
+      <div class="admin-logo">
+        <img src="../img/logo.png" alt="Logo HuertoHogar" />
+        <span>HuertoHogar</span>
+      </div>
+
+      <nav class="admin-menu">
+        <ul>
+          <li><a href="index.html">📊 Dashboard</a></li>
+          <li><a href="productos.html">🥦 Productos</a></li>
+          <li><a href="usuarios.html" class="activo">👤 Usuarios</a></li>
+          <li><a href="../index.html">🔙 Volver al sitio</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    <div class="admin-contenido">
+
+      <header class="admin-header">
+        <h1>Gestión de Usuarios</h1>
+        <div class="admin-usuario">
+          <span>👋 Hola, Admin</span>
+        </div>
+      </header>
+
+      <main class="admin-main">
+
+        <!-- BARRA DE ACCIONES -->
+        <section class="admin-toolbar">
+
+          <div class="admin-buscador">
+            <input
+              type="text"
+              id="buscar-usuario"
+              placeholder="Buscar por nombre o correo..."
+              onkeyup="filtrarTablaUsuarios()"
+            />
+          </div>
+
+          <!-- FILTRO POR ESTADO -->
+          <select id="filtro-estado-usuario" onchange="filtrarTablaUsuarios()">
+            <option value="todos">Todos los estados</option>
+            <option value="activo">Activos</option>
+            <option value="inactivo">Inactivos</option>
+          </select>
+
+          <a href="nuevo-usuario.html" class="btn-principal">
+            ➕ Nuevo Usuario
+          </a>
+
+        </section>
+
+        <!-- TABLA DE USUARIOS -->
+        <section class="admin-tabla-contenedor">
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre completo</th>
+                <th>Correo</th>
+                <th>Región</th>
+                <th>Estado</th>
+                <th>Fecha registro</th>
+                <th>Acciones</th>
+              </tr>
+            </thead>
+            <!--
+              Igual que productos: el JS recorre el array de usuarios
+              con forEach y genera una fila por cada uno.
+            -->
+            <tbody id="tabla-usuarios">
+              <!-- JS insertará todas las filas aquí -->
+            </tbody>
+          </table>
+
+          <p id="tabla-usuarios-vacia" style="display:none;">
+            No se encontraron usuarios.
+          </p>
+        </section>
+
+      </main>
+
+    </div>
+  </div>
+
+  <!-- MODAL CONFIRMACIÓN ELIMINAR -->
+  <div id="modal-eliminar-usuario" class="modal" style="display:none;">
+    <div class="modal-contenido">
+      <h3>¿Eliminar usuario?</h3>
+      <p>Esta acción no se puede deshacer.</p>
+      <div class="modal-acciones">
+        <button onclick="cerrarModalUsuario()" class="btn-secundario">Cancelar</button>
+        <button onclick="confirmarEliminarUsuario()" class="btn-peligro">Eliminar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/admin-usuarios.js"></script>
+
+</body>
+</html>

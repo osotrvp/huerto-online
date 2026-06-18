@@ -252,3 +252,111 @@ nav {
 .seccion-formulario {
   padding: 3rem 2rem;
 }
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.encabezado-pagina {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+}
+
+.encabezado-pagina h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.encabezado-pagina p {
+  color: var(--color-texto-claro);
+  font-size: 1.1rem;
+}
+
+.breadcrumb {
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+  color: var(--color-texto-claro);
+}
+
+.breadcrumb a {
+  color: var(--color-verde);
+}
+
+.filtros {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 1rem 0 2.5rem;
+}
+
+.btn-filtro {
+  background-color: var(--color-blanco);
+  border: 1px solid #ddd;
+  padding: 0.6rem 1.4rem;
+  border-radius: 20px;
+  font-family: var(--fuente-cuerpo);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-filtro:hover {
+  border-color: var(--color-verde);
+}
+
+.btn-filtro.activo {
+  background-color: var(--color-verde);
+  color: var(--color-blanco);
+  border-color: var(--color-verde);
+}
+
+footer {
+  background-color: var(--color-cafe);
+  color: var(--color-blanco);
+  margin-top: 4rem;
+}
+
+.footer-columnas {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 2rem;
+  padding: 3rem 2rem;
+}
+
+.footer-col h4 {
+  color: var(--color-amarillo);
+  margin-bottom: 1rem;
+  font-family: var(--fuente-titulos);
+}
+
+.footer-col p {
+  color: #e8e0d8;
+  margin-bottom: 0.5rem;
+  font-size: 0.92rem;
+}
+
+.footer-col ul li {
+  margin-bottom: 0.6rem;
+}
+
+.footer-col ul li a {
+  color: #e8e0d8;
+  font-size: 0.92rem;
+}
+
+.footer-col ul li a:hover {
+  color: var(--color-amarillo);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding: 1.2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  font-size: 0.85rem;
+  color: #cbbfae;
+}

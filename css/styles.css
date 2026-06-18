@@ -51,3 +51,204 @@ img {
   display: block;
 
 }
+
+
+
+header {
+  background-color: var(--color-blanco);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 1rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+
+}
+
+/* LOGO */
+.nav-logo a {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+}
+
+.nav-logo img {
+  width: 40px;
+  height: 40px;
+}
+
+.nav-logo span {
+  font-family: var(--fuente-titulos);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--color-verde);
+}
+
+/* MENÚ PRINCIPAL */
+.nav-menu {
+  display: flex;
+  gap: 2rem;
+
+}
+
+.nav-menu a {
+  font-weight: 600;
+  color: var(--color-texto-oscuro);
+  transition: color 0.2s ease;
+
+}
+
+.nav-menu a:hover {
+  color: var(--color-verde);
+
+}
+
+.nav-menu a.activo {
+  color: var(--color-verde);
+  border-bottom: 2px solid var(--color-verde);
+  padding-bottom: 0.3rem;
+
+}
+
+
+.nav-acciones {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  font-size: 0.95rem;
+}
+
+.nav-acciones a:last-child {
+  background-color: var(--color-verde);
+  color: var(--color-blanco);
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-weight: 600;
+
+}
+
+.btn-principal {
+  display: inline-block;
+  background-color: var(--color-verde);
+  color: var(--color-blanco);
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--fuente-cuerpo);
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.btn-principal:hover {
+  background-color: #256e45;
+  transform: translateY(-2px);
+}
+
+.btn-secundario {
+  display: inline-block;
+  background-color: transparent;
+  color: var(--color-verde);
+  padding: 0.8rem 1.8rem;
+  border: 2px solid var(--color-verde);
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-secundario:hover {
+  background-color: var(--color-verde);
+  color: var(--color-blanco);
+}
+
+.btn-peligro {
+  display: inline-block;
+  background-color: #c0392b;
+  color: var(--color-blanco);
+  padding: 0.8rem 1.8rem;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.btn-volver {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--color-verde);
+  font-weight: 600;
+}
+
+.campo {
+  margin-bottom: 1.3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.campo label {
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+  font-size: 0.92rem;
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+  padding: 0.7rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: var(--fuente-cuerpo);
+  font-size: 0.95rem;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+  outline: none;
+  border-color: var(--color-verde);
+}
+
+.campo-check {
+  flex-direction: row;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.error {
+  color: #c0392b;
+  font-size: 0.82rem;
+  margin-top: 0.3rem;
+  display: none;
+}
+
+.error.visible {
+  display: block;
+}
+
+.caja-formulario {
+  background-color: var(--color-blanco);
+  padding: 2.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.07);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.seccion-formulario {
+  padding: 3rem 2rem;
+}

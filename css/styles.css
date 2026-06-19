@@ -777,3 +777,224 @@ footer {
   width: 100%;
   margin-bottom: 1rem;
 }
+
+.quienes-somos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  padding: 2rem 0 4rem;
+}
+
+.quienes-texto h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.quienes-texto p {
+  margin-bottom: 1rem;
+  color: var(--color-texto-claro);
+}
+
+.quienes-imagen img {
+  border-radius: 12px;
+}
+
+.mision-vision {
+  padding: 2rem 0 4rem;
+}
+
+.mision-vision {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+.mv-card {
+  background-color: var(--color-blanco);
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.mv-card span {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.mv-card h3 {
+  margin-bottom: 0.8rem;
+}
+
+.mv-card p,
+.mv-card ul {
+  color: var(--color-texto-claro);
+  font-size: 0.92rem;
+}
+
+.mv-card ul li {
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--color-verde);
+}
+
+.cifras {
+  background-color: var(--color-verde);
+  color: var(--color-blanco);
+  border-radius: 16px;
+  padding: 3rem 2rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.cifras h2 {
+  color: var(--color-blanco);
+  margin-bottom: 2rem;
+}
+
+.cifras-grilla {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.cifra strong {
+  font-size: 2.4rem;
+  font-family: var(--fuente-titulos);
+  display: block;
+}
+
+.cifra p {
+  opacity: 0.9;
+  font-size: 0.92rem;
+}
+
+.equipo {
+  text-align: center;
+  padding: 2rem 0 4rem;
+}
+
+.equipo > p {
+  color: var(--color-texto-claro);
+  margin-bottom: 2rem;
+}
+
+.equipo-grilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.integrante {
+  background-color: var(--color-blanco);
+  border-radius: 12px;
+  padding: 1.8rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+}
+
+.integrante img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto 1rem;
+  object-fit: cover;
+}
+
+.integrante h3 {
+  margin-bottom: 0.3rem;
+  font-size: 1.05rem;
+}
+
+.integrante p {
+  color: var(--color-texto-claro);
+  font-size: 0.88rem;
+}
+
+.blog-destacado {
+  padding: 1rem 0 2rem;
+}
+
+.blog-grilla {
+  padding: 1rem 0 4rem;
+}
+
+.blog-grilla h2 {
+  margin-bottom: 1.5rem;
+}
+
+#contenedor-blogs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+}
+
+.card-blog {
+  background-color: var(--color-blanco);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease;
+}
+
+.card-blog:hover {
+  transform: translateY(-4px);
+}
+
+.card-blog img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.card-blog-info {
+  padding: 1.2rem;
+}
+
+.card-blog-info h3 {
+  font-size: 1.05rem;
+  margin: 0.6rem 0;
+}
+
+.card-blog-info p {
+  color: var(--color-texto-claro);
+  font-size: 0.88rem;
+}
+
+.seccion-contacto {
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 3rem;
+  padding: 1rem 0 4rem;
+}
+
+.info-contacto {
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+.info-item {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.info-item span {
+  font-size: 1.6rem;
+}
+
+.info-item h3 {
+  font-size: 1rem;
+  margin-bottom: 0.3rem;
+}
+
+.info-item p {
+  color: var(--color-texto-claro);
+  font-size: 0.92rem;
+}
+
+.seccion-contacto .caja-formulario {
+  max-width: none;
+  margin: 0;
+}

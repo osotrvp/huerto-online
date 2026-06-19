@@ -330,8 +330,28 @@ footer {
 
 .footer-col h4 {
   color: var(--color-amarillo);
-  margin-bottom: 1rem;
+  margin-bottom: 0.8rem;
   font-family: var(--fuente-titulos);
+}
+
+.footer-col {
+  max-width: 260px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-col p {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-align: left;
+}
+
+.footer-col ul {
+  margin: 0;
+  padding: 0;
 }
 
 .footer-col p {
@@ -1239,4 +1259,96 @@ tbody tr:hover {
   display: flex;
   gap: 1rem;
   justify-content: center;
+}
+
+@media (max-width: 968px) {
+  nav {
+    flex-wrap: wrap;
+    padding: 1rem;
+  }
+
+  .nav-menu {
+    display: none;
+  }
+
+  .hero {
+    padding: 2.5rem 1.5rem;
+  }
+
+  .hero-contenido h1 {
+    font-size: 2rem;
+  }
+
+  .detalle-producto,
+  .detalle-blog-layout,
+  .carrito-layout,
+  .seccion-contacto,
+  .quienes-somos {
+    grid-template-columns: 1fr;
+  }
+
+  .mision-vision {
+    grid-template-columns: 1fr;
+  }
+
+  .cifras-grilla {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-columnas {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .admin-sidebar {
+    width: 200px;
+  }
+
+  .admin-cards-resumen {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .form-grilla {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 0 1.2rem;
+  }
+
+  .encabezado-pagina h1 {
+    font-size: 1.9rem;
+  }
+
+  .nav-acciones {
+    gap: 0.7rem;
+    font-size: 0.85rem;
+  }
+
+  .nav-acciones a:not(:last-child) {
+    display: none;
+  }
+
+  .cifras-grilla {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-layout {
+    flex-direction: column;
+  }
+
+  .admin-sidebar {
+    width: 100%;
+  }
+
+  .admin-menu ul {
+    display: flex;
+    overflow-x: auto;
+  }
+
+  .admin-cards-resumen {
+    grid-template-columns: 1fr;
+  }
 }

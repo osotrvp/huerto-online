@@ -50,16 +50,8 @@
 
         <section class="admin-form-contenedor">
 
-          <!--
-            Mismo patrón que login/registro: onsubmit intercepta
-            el envío. id="form-producto" para que el JS lo identifique.
-          -->
-          <form id="form-producto" onsubmit="return guardarProducto(event)">
+          <form id="form-producto">
 
-            <!--
-              Campo OCULTO: guarda el ID del producto que se está editando.
-              Si está vacío, significa que es un producto nuevo.
-              El usuario nunca ve ni toca este campo.
             -->
             <input type="hidden" id="producto-id" name="producto-id" />
 
@@ -152,6 +144,7 @@
   </div>
 
   <script src="../js/productos.js"></script>
+  <script src="../js/validaciones.js"></script>
   <script src="js/admin-productos.js"></script>
 
 </body>

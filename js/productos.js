@@ -1,4 +1,4 @@
-const productos = [
+const productosIniciales = [
   {
     id: 1,
     nombre: "Tomate orgánico",
@@ -88,6 +88,19 @@ const productos = [
     destacado: false
   }
 ];
+
+function cargarProductosDesdeStorage() {
+  const data = localStorage.getItem("productosHuertoHogar");
+  if (data) return JSON.parse(data);
+  localStorage.setItem("productosHuertoHogar", JSON.stringify(productosIniciales));
+  return productosIniciales;
+}
+
+function guardarProductosEnStorage() {
+  localStorage.setItem("productosHuertoHogar", JSON.stringify(productos));
+}
+
+let productos = cargarProductosDesdeStorage();
 
 function crearCardProducto(producto) {
   return `

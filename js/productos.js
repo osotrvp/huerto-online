@@ -145,8 +145,52 @@ function obtenerProductoPorId(id) {
   return productos.find(p => p.id === Number(id));
 }
 
+function obtenerIdDeUrl() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get("id");
+}
+
+function renderDetalleProducto() {
+  const contenedor = document.getElementById("producto-nombre");
+  if (!contenedor) return;
+
+  const id = obtenerIdDeUrl();
+  const producto = obtenerProductoPorId(id);
+
+  if (!producto) {
+    document.querySelector(".detalle-producto").innerHTML = "<p>Producto no encontrado.</p>";
+    return;
+  }
+
+  document.getElementById("breadcrumb-nombre").textContent = producto.nombre;
+  document.getElementById("producto-imagen").src = `img/${producto.imagen}`;
+  document.getElementById("producto-imagen").alt = producto.nombre;
+  document.getElementById("producto-categoria").textContent = producto.categoria;
+  document.getElementById("producto-nombre").textContent = producto.nombre;
+  document.getElementById("producto-descripcion").textContent = producto.descripcion;
+  document.getElementById("producto-precio").textContent = producto.precio.toLocaleString("es-CL");
+  document.getElementById("producto-stock").textContent = producto.stock;
+
+  const cantidadInput = document.getElementById("cantidad");
+  if (cantidadInput) cantidadInput.max = producto.stock;
+
+  renderProductosRelacionados(producto);
+}
+
+function renderProductosRelacionados(productoActual) {
+  const contenedor = document.getElementById("contenedor-relacionados");
+  if (!contenedor) return;
+
+  const relacionados = productos
+    .filter(p => p.categoria === productoActual.categoria && p.id !== productoActual.id)
+    .slice(0, 3);
+
+  contenedor.innerHTML = relacionados.map(crearCardProducto).join("");
+}
+
 document.addEventListener("DOMContentLoaded", () => {
   renderProductosDestacados();
   renderCatalogoProductos();
   inicializarFiltrosProductos();
+  renderDetalleProducto();
 });

@@ -1406,3 +1406,21 @@ tbody tr:hover {
   cursor: pointer;
   font-size: 1.1rem;
 }
+
+.badge-activo {
+  background-color: #e8f3ec;
+  color: var(--color-verde);
+  padding: 0.25rem 0.7rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.badge-inactivo {
+  background-color: #f1f1f1;
+  color: var(--color-texto-claro);
+  padding: 0.25rem 0.7rem;
+  border-radius: 12px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}

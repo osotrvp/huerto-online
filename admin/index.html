@@ -7,25 +7,25 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
-  <!-- ../ porque styles.css está una carpeta más arriba -->
+  
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 
 <body class="admin-body">
 
-  <!-- ===== LAYOUT ADMIN: SIDEBAR + CONTENIDO ===== -->
+  
   <div class="admin-layout">
 
-    <!-- ===== SIDEBAR ===== -->
+    
     <aside class="admin-sidebar">
 
-      <!-- LOGO -->
+      
       <div class="admin-logo">
         <img src="../img/logo.png" alt="Logo HuertoHogar" />
         <span>HuertoHogar</span>
       </div>
 
-      <!-- MENÚ VERTICAL -->
+      
       <nav class="admin-menu">
         <ul>
           <li><a href="index.html" class="activo">📊 Dashboard</a></li>
@@ -37,10 +37,10 @@
 
     </aside>
 
-    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    
     <div class="admin-contenido">
 
-      <!-- HEADER SUPERIOR -->
+      
       <header class="admin-header">
         <h1>Dashboard</h1>
         <div class="admin-usuario">
@@ -48,19 +48,16 @@
         </div>
       </header>
 
-      <!-- MAIN -->
+      
       <main class="admin-main">
 
-        <!-- TARJETAS DE RESUMEN -->
+        
         <section class="admin-cards-resumen">
 
           <div class="admin-card">
             <span class="admin-card-icono">🥦</span>
             <div>
-              <!--
-                El JS rellena estos números contando los arrays
-                de productos y usuarios (.length).
-              -->
+              
               <strong id="total-productos">0</strong>
               <p>Productos totales</p>
             </div>
@@ -77,10 +74,7 @@
           <div class="admin-card">
             <span class="admin-card-icono">⚠️</span>
             <div>
-              <!--
-                El JS cuenta productos con stock bajo (ej: menor a 10)
-                filtrando el array.
-              -->
+              
               <strong id="stock-bajo">0</strong>
               <p>Productos con stock bajo</p>
             </div>
@@ -96,7 +90,7 @@
 
         </section>
 
-        <!-- TABLA: ÚLTIMOS PRODUCTOS AGREGADOS -->
+        
         <section class="admin-tabla-resumen">
           <h2>Últimos productos agregados</h2>
 
@@ -110,12 +104,9 @@
                 <th>Stock</th>
               </tr>
             </thead>
-            <!--
-              tbody vacío: el JS toma los últimos N productos
-              del array y genera una <tr> por cada uno.
-            -->
+            
             <tbody id="tabla-ultimos-productos">
-              <!-- JS insertará filas aquí -->
+              
             </tbody>
           </table>
 

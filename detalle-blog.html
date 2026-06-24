@@ -12,7 +12,7 @@
 
 <body>
 
-  <!-- ===== HEADER ===== -->
+  
   <header>
     <nav>
       <div class="nav-logo">
@@ -40,76 +40,61 @@
     </nav>
   </header>
 
-  <!-- ===== MAIN ===== -->
+  
   <main>
 
-    <!-- MIGAS DE PAN -->
+    
     <nav class="breadcrumb">
       <a href="index.html">Inicio</a>
       <span> / </span>
       <a href="blogs.html">Blog</a>
       <span> / </span>
-      <!--
-        El JS rellena el título del artículo aquí.
-        Así el usuario sabe en qué página está.
-      -->
+      
       <span id="breadcrumb-titulo">Cargando...</span>
     </nav>
 
-    <!-- LAYOUT: ARTÍCULO + SIDEBAR -->
+    
     <div class="detalle-blog-layout">
 
-      <!-- COLUMNA PRINCIPAL: ARTÍCULO -->
+      
       <article class="articulo-completo">
 
-        <!-- IMAGEN DE PORTADA -->
+        
         <img id="blog-imagen" src="" alt="Imagen del artículo" class="blog-imagen-portada" />
 
-        <!-- METADATOS -->
+        
         <div class="blog-meta">
-          <!--
-            El JS rellena estos spans con los datos del artículo:
-            categoría, autor y fecha de publicación.
-          -->
+          
           <span id="blog-categoria" class="etiqueta-categoria"></span>
           <span id="blog-autor">✍️ </span>
           <span id="blog-fecha">📅 </span>
         </div>
 
-        <!-- TÍTULO -->
+        
         <h1 id="blog-titulo"></h1>
 
-        <!-- BAJADA / RESUMEN -->
+        
         <p id="blog-resumen" class="blog-bajada"></p>
 
-        <!-- CONTENIDO COMPLETO -->
-        <!--
-          innerHTML aquí porque el contenido puede tener párrafos,
-          listas, subtítulos, etc. guardados como HTML en el array.
-          Con textContent se perdería todo el formato.
-        -->
+        
+        
         <div id="blog-contenido"></div>
 
-        <!-- ETIQUETAS -->
+        
         <div class="blog-etiquetas">
           <strong>Etiquetas:</strong>
-          <!--
-            El JS genera un <span> por cada etiqueta del artículo.
-          -->
+          
           <div id="blog-tags"></div>
         </div>
 
-        <!-- NAVEGACIÓN ENTRE ARTÍCULOS -->
+        
         <div class="blog-navegacion">
-          <!--
-            El JS busca el artículo anterior y siguiente en el array
-            y genera los links dinámicamente.
-          -->
+          
           <div id="blog-anterior">
-            <!-- JS inserta: ← Artículo anterior -->
+            
           </div>
           <div id="blog-siguiente">
-            <!-- JS inserta: Artículo siguiente → -->
+            
           </div>
         </div>
 
@@ -117,22 +102,19 @@
 
       </article>
 
-      <!-- COLUMNA LATERAL: SIDEBAR -->
+      
       <aside class="blog-sidebar">
 
-        <!-- ARTÍCULOS RECIENTES -->
+        
         <div class="sidebar-bloque">
           <h3>Artículos recientes</h3>
-          <!--
-            El JS toma los últimos 3 artículos del array
-            y los lista aquí con su link.
-          -->
+          
           <ul id="sidebar-recientes">
-            <!-- JS insertará los links aquí -->
+            
           </ul>
         </div>
 
-        <!-- CATEGORÍAS -->
+        
         <div class="sidebar-bloque">
           <h3>Categorías</h3>
           <ul class="sidebar-categorias">
@@ -143,7 +125,7 @@
           </ul>
         </div>
 
-        <!-- CALL TO ACTION -->
+        
         <div class="sidebar-bloque sidebar-cta">
           <h3>¿Listo para comprar?</h3>
           <p>Explora nuestro catálogo de productos orgánicos frescos.</p>
@@ -156,7 +138,7 @@
 
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  
   <footer>
     <div class="footer-columnas">
 

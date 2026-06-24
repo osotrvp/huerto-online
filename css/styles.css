@@ -75,7 +75,7 @@ nav {
 
 }
 
-/* LOGO */
+
 .nav-logo a {
   display: flex;
   align-items: center;
@@ -95,7 +95,7 @@ nav {
   color: var(--color-verde);
 }
 
-/* MENÚ PRINCIPAL */
+
 .nav-menu {
   display: flex;
   gap: 2rem;

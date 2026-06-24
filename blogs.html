@@ -12,7 +12,7 @@
 
 <body>
 
-  <!-- ===== HEADER ===== -->
+  
   <header>
     <nav>
       <div class="nav-logo">
@@ -40,21 +40,18 @@
     </nav>
   </header>
 
-  <!-- ===== MAIN ===== -->
+  
   <main>
 
-    <!-- ENCABEZADO -->
+    
     <section class="encabezado-pagina">
       <h1>Blog</h1>
       <p>Consejos, recetas y noticias del mundo orgánico</p>
     </section>
 
-    <!-- CATEGORÍAS DEL BLOG -->
+    
     <section class="filtros">
-      <!--
-        Mismo patrón que los filtros de productos.
-        data-categoria le dice al JS qué artículos mostrar.
-      -->
+      
       <button class="btn-filtro activo" data-categoria="todos">Todos</button>
       <button class="btn-filtro" data-categoria="recetas">Recetas</button>
       <button class="btn-filtro" data-categoria="consejos">Consejos</button>
@@ -62,27 +59,21 @@
       <button class="btn-filtro" data-categoria="agricultura">Agricultura</button>
     </section>
 
-    <!-- ARTÍCULO DESTACADO -->
-    <!--
-      El primer artículo del array se muestra grande arriba.
-      El JS lo separa del resto y lo inserta aquí.
-    -->
+    
+    
     <section class="blog-destacado">
       <div id="articulo-destacado">
-        <!-- JS insertará el artículo destacado aquí -->
+        
       </div>
     </section>
 
-    <!-- GRILLA DE ARTÍCULOS -->
+    
     <section class="blog-grilla">
       <h2>Artículos recientes</h2>
 
-      <!--
-        El resto de artículos (del índice 1 en adelante) van aquí como cards.
-        El JS los genera con innerHTML igual que las cards de productos.
-      -->
+      
       <div id="contenedor-blogs">
-        <!-- JS insertará las cards aquí -->
+        
       </div>
 
       <p id="mensaje-vacio-blog" style="display:none;">
@@ -92,7 +83,7 @@
 
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  
   <footer>
     <div class="footer-columnas">
 
@@ -126,10 +117,7 @@
     </div>
   </footer>
 
-  <!--
-    blogs.js lo crearemos después junto a productos.js.
-    Tendrá el array de artículos y la lógica de renderizado.
-  -->
+  
   <script src="js/blogs.js"></script>
   <script src="js/carrito.js"></script>
 

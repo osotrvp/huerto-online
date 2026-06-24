@@ -12,7 +12,7 @@
 
 <body>
 
-  <!-- ===== HEADER ===== -->
+  
   <header>
     <nav>
       <div class="nav-logo">
@@ -40,7 +40,7 @@
     </nav>
   </header>
 
-  <!-- ===== MAIN ===== -->
+  
   <main>
 
     <section class="seccion-formulario">
@@ -50,14 +50,10 @@
         <h1>Iniciar Sesión</h1>
         <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
 
-        <!--
-          onsubmit="return validarLogin(event)" → cuando el usuario hace clic en
-          el botón, el navegador llama a esta función ANTES de enviar el formulario.
-          El "return false" dentro del JS evita que la página se recargue.
-        -->
+        
         <form id="form-login" onsubmit="return validarLogin(event)">
 
-          <!-- CAMPO EMAIL -->
+          
           <div class="campo">
             <label for="email">Correo electrónico</label>
             <input
@@ -66,14 +62,11 @@
               name="email"
               placeholder="correo@ejemplo.cl"
             />
-            <!--
-              Este span empieza vacío y oculto.
-              El JS escribe el mensaje de error aquí y lo hace visible.
-            -->
+            
             <span class="error" id="error-email"></span>
           </div>
 
-          <!-- CAMPO CONTRASEÑA -->
+          
           <div class="campo">
             <label for="password">Contraseña</label>
             <input
@@ -85,18 +78,18 @@
             <span class="error" id="error-password"></span>
           </div>
 
-          <!-- RECORDAR SESIÓN -->
+          
           <div class="campo campo-check">
             <input type="checkbox" id="recordar" name="recordar" />
             <label for="recordar">Recordar mi sesión</label>
           </div>
 
-          <!-- BOTÓN SUBMIT -->
+          
           <button type="submit" class="btn-principal">
             Iniciar Sesión
           </button>
 
-          <!-- MENSAJE GENERAL (éxito o error de credenciales) -->
+          
           <p id="mensaje-login" style="display:none;"></p>
 
         </form>
@@ -111,7 +104,7 @@
 
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  
   <footer>
     <div class="footer-columnas">
 

@@ -12,7 +12,7 @@
 
 <body>
 
-  <!-- ===== HEADER ===== -->
+  
   <header>
     <nav>
       <div class="nav-logo">
@@ -40,68 +40,61 @@
     </nav>
   </header>
 
-  <!-- ===== MAIN ===== -->
+  
   <main>
 
-    <!-- MIGAS DE PAN (breadcrumb) -->
+    
     <nav class="breadcrumb">
       <a href="index.html">Inicio</a>
       <span> / </span>
       <a href="productos.html">Productos</a>
       <span> / </span>
-      <!-- El JS rellena el nombre del producto aquí -->
+      
       <span id="breadcrumb-nombre">Cargando...</span>
     </nav>
 
-    <!-- DETALLE DEL PRODUCTO -->
-    <!-- 
-      Todo este bloque empieza vacío.
-      El JS lee el ?id=X de la URL, busca el producto en el array
-      y rellena cada elemento por su ID.
-    -->
+    
+    
     <section class="detalle-producto">
 
-      <!-- IMAGEN -->
+      
       <div class="detalle-imagen">
         <img id="producto-imagen" src="" alt="Imagen del producto" />
       </div>
 
-      <!-- INFO -->
+      
       <div class="detalle-info">
 
-        <!-- Categoría como etiqueta -->
+        
         <span id="producto-categoria" class="etiqueta-categoria"></span>
 
         <h1 id="producto-nombre"></h1>
 
         <p id="producto-descripcion"></p>
 
-        <!-- Precio -->
+        
         <p class="detalle-precio">
           $<span id="producto-precio"></span>
         </p>
 
-        <!-- Stock -->
+        
         <p class="detalle-stock">
           Stock disponible: <strong id="producto-stock"></strong> unidades
         </p>
 
-        <!-- Selector de cantidad -->
+        
         <div class="selector-cantidad">
           <label for="cantidad">Cantidad:</label>
-          <!-- 
-            min="1" impide poner 0 o negativo.
-            El JS va a leer este valor al agregar al carrito.
-          -->
+          
           <input type="number" id="cantidad" name="cantidad" value="1" min="1" />
         </div>
 
-        <!-- Botón agregar al carrito -->
+        
         <button id="btn-agregar-carrito" onclick="agregarAlCarrito()">
           🛒 Agregar al carrito
         </button>
 
-        <!-- Mensaje de confirmación (oculto por defecto) -->
+        
         <p id="mensaje-confirmacion" style="display:none;">
           ✅ Producto agregado al carrito
         </p>
@@ -111,21 +104,18 @@
       </div>
     </section>
 
-    <!-- PRODUCTOS RELACIONADOS -->
+    
     <section class="productos-relacionados">
       <h2>Productos relacionados</h2>
-      <!--
-        El JS va a buscar otros productos de la misma categoría
-        y los inserta aquí.
-      -->
+      
       <div id="contenedor-relacionados">
-        <!-- JS insertará cards aquí -->
+        
       </div>
     </section>
 
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  
   <footer>
     <div class="footer-columnas">
 

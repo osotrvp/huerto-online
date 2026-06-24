@@ -12,7 +12,7 @@
 
 <body>
 
-  <!-- ===== HEADER ===== -->
+  
   <header>
     <nav>
       <div class="nav-logo">
@@ -40,10 +40,10 @@
     </nav>
   </header>
 
-  <!-- ===== MAIN ===== -->
+  
   <main>
 
-    <!-- ENCABEZADO -->
+    
     <section class="encabezado-pagina">
       <h1>Contáctanos</h1>
       <p>Estamos para ayudarte. Escríbenos y te respondemos a la brevedad.</p>
@@ -51,7 +51,7 @@
 
     <section class="seccion-contacto">
 
-      <!-- INFORMACIÓN DE CONTACTO -->
+      
       <div class="info-contacto">
 
         <div class="info-item">
@@ -89,14 +89,14 @@
 
       </div>
 
-      <!-- FORMULARIO DE CONTACTO -->
+      
       <div class="caja-formulario">
 
         <h2>Envíanos un mensaje</h2>
 
         <form id="form-contacto" onsubmit="return validarContacto(event)">
 
-          <!-- NOMBRE -->
+          
           <div class="campo">
             <label for="nombre">Nombre completo</label>
             <input
@@ -108,7 +108,7 @@
             <span class="error" id="error-nombre"></span>
           </div>
 
-          <!-- EMAIL -->
+          
           <div class="campo">
             <label for="email">Correo electrónico</label>
             <input
@@ -120,7 +120,7 @@
             <span class="error" id="error-email"></span>
           </div>
 
-          <!-- TELÉFONO -->
+          
           <div class="campo">
             <label for="telefono">Teléfono (opcional)</label>
             <input
@@ -132,7 +132,7 @@
             <span class="error" id="error-telefono"></span>
           </div>
 
-          <!-- ASUNTO -->
+          
           <div class="campo">
             <label for="asunto">Asunto</label>
             <select id="asunto" name="asunto">
@@ -146,14 +146,10 @@
             <span class="error" id="error-asunto"></span>
           </div>
 
-          <!-- MENSAJE -->
+          
           <div class="campo">
             <label for="mensaje">Mensaje</label>
-            <!--
-              <textarea> es para texto largo (varias líneas).
-              rows="5" define la altura inicial visible.
-              El usuario puede escribir más y el campo hace scroll.
-            -->
+            
             <textarea
               id="mensaje"
               name="mensaje"
@@ -163,12 +159,12 @@
             <span class="error" id="error-mensaje"></span>
           </div>
 
-          <!-- BOTÓN SUBMIT -->
+          
           <button type="submit" class="btn-principal">
             Enviar mensaje
           </button>
 
-          <!-- MENSAJE DE RESPUESTA -->
+          
           <p id="mensaje-contacto" style="display:none;"></p>
 
         </form>
@@ -179,7 +175,7 @@
 
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  
   <footer>
     <div class="footer-columnas">
 

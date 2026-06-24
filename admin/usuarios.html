@@ -14,7 +14,7 @@
 
   <div class="admin-layout">
 
-    <!-- ===== SIDEBAR ===== -->
+    
     <aside class="admin-sidebar">
       <div class="admin-logo">
         <img src="../img/logo.png" alt="Logo HuertoHogar" />
@@ -31,7 +31,7 @@
       </nav>
     </aside>
 
-    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    
     <div class="admin-contenido">
 
       <header class="admin-header">
@@ -43,7 +43,7 @@
 
       <main class="admin-main">
 
-        <!-- BARRA DE ACCIONES -->
+        
         <section class="admin-toolbar">
 
           <div class="admin-buscador">
@@ -55,7 +55,7 @@
             />
           </div>
 
-          <!-- FILTRO POR ESTADO -->
+          
           <select id="filtro-estado-usuario" onchange="filtrarTablaUsuarios()">
             <option value="todos">Todos los estados</option>
             <option value="activo">Activos</option>
@@ -68,7 +68,7 @@
 
         </section>
 
-        <!-- TABLA DE USUARIOS -->
+        
         <section class="admin-tabla-contenedor">
           <table>
             <thead>
@@ -82,12 +82,9 @@
                 <th>Acciones</th>
               </tr>
             </thead>
-            <!--
-              Igual que productos: el JS recorre el array de usuarios
-              con forEach y genera una fila por cada uno.
-            -->
+            
             <tbody id="tabla-usuarios">
-              <!-- JS insertará todas las filas aquí -->
+              
             </tbody>
           </table>
 
@@ -101,7 +98,7 @@
     </div>
   </div>
 
-  <!-- MODAL CONFIRMACIÓN ELIMINAR -->
+  
   <div id="modal-eliminar-usuario" class="modal" style="display:none;">
     <div class="modal-contenido">
       <h3>¿Eliminar usuario?</h3>

@@ -12,7 +12,7 @@
 
 <body>
 
-  <!-- ===== HEADER (igual en todas las páginas) ===== -->
+  
   <header>
     <nav>
       <div class="nav-logo">
@@ -40,22 +40,18 @@
     </nav>
   </header>
 
-  <!-- ===== MAIN ===== -->
+  
   <main>
 
-    <!-- TÍTULO DE SECCIÓN -->
+    
     <section class="encabezado-pagina">
       <h1>Nuestros Productos</h1>
       <p>Frescos, orgánicos y directamente del campo a tu hogar</p>
     </section>
 
-    <!-- FILTROS POR CATEGORÍA -->
+    
     <section class="filtros">
-      <!-- 
-        Cada botón tiene data-categoria con el valor a filtrar.
-        El JS va a leer ese atributo para saber qué mostrar.
-        "todos" muestra el catálogo completo.
-      -->
+      
       <button class="btn-filtro activo" data-categoria="todos">Todos</button>
       <button class="btn-filtro" data-categoria="verduras">Verduras</button>
       <button class="btn-filtro" data-categoria="frutas">Frutas</button>
@@ -63,17 +59,14 @@
       <button class="btn-filtro" data-categoria="otros">Otros</button>
     </section>
 
-    <!-- GRILLA DE PRODUCTOS -->
+    
     <section class="catalogo">
-      <!--
-        Este div es el contenedor donde el JS va a insertar las cards.
-        Empieza vacío — el JS lo rellena al cargar la página.
-      -->
+      
       <div id="contenedor-productos">
-        <!-- JS insertará las cards aquí -->
+        
       </div>
 
-      <!-- Mensaje que aparece si no hay productos en esa categoría -->
+      
       <p id="mensaje-vacio" style="display:none;">
         No hay productos en esta categoría.
       </p>
@@ -81,7 +74,7 @@
 
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  
   <footer>
     <div class="footer-columnas">
 

@@ -14,7 +14,7 @@
 
   <div class="admin-layout">
 
-    <!-- ===== SIDEBAR ===== -->
+    
     <aside class="admin-sidebar">
       <div class="admin-logo">
         <img src="../img/logo.png" alt="Logo HuertoHogar" />
@@ -31,7 +31,7 @@
       </nav>
     </aside>
 
-    <!-- ===== CONTENIDO PRINCIPAL ===== -->
+    
     <div class="admin-contenido">
 
       <header class="admin-header">
@@ -43,10 +43,10 @@
 
       <main class="admin-main">
 
-        <!-- BARRA DE ACCIONES: BUSCADOR + BOTÓN NUEVO -->
+        
         <section class="admin-toolbar">
 
-          <!-- BUSCADOR -->
+          
           <div class="admin-buscador">
             <input
               type="text"
@@ -54,14 +54,10 @@
               placeholder="Buscar producto por nombre..."
               onkeyup="filtrarTablaProductos()"
             />
-            <!--
-              onkeyup en vez de onsubmit: queremos que filtre
-              EN TIEMPO REAL mientras el usuario escribe,
-              no que espere a un Enter o botón.
-            -->
+            
           </div>
 
-          <!-- FILTRO POR CATEGORÍA -->
+          
           <select id="filtro-categoria-admin" onchange="filtrarTablaProductos()">
             <option value="todos">Todas las categorías</option>
             <option value="verduras">Verduras</option>
@@ -70,14 +66,14 @@
             <option value="otros">Otros</option>
           </select>
 
-          <!-- BOTÓN NUEVO PRODUCTO -->
+          
           <a href="nuevo-producto.html" class="btn-principal">
             ➕ Nuevo Producto
           </a>
 
         </section>
 
-        <!-- TABLA DE PRODUCTOS -->
+        
         <section class="admin-tabla-contenedor">
           <table>
             <thead>
@@ -91,18 +87,13 @@
                 <th>Acciones</th>
               </tr>
             </thead>
-            <!--
-              El JS recorre el array de productos con un forEach
-              y genera una <tr> completa por cada producto,
-              incluyendo los botones Editar y Eliminar con el ID
-              correspondiente en su onclick.
-            -->
+            
             <tbody id="tabla-productos">
-              <!-- JS insertará todas las filas aquí -->
+              
             </tbody>
           </table>
 
-          <!-- Mensaje si la búsqueda no encuentra nada -->
+          
           <p id="tabla-vacia" style="display:none;">
             No se encontraron productos.
           </p>
@@ -113,21 +104,14 @@
     </div>
   </div>
 
-  <!--
-    MODAL DE CONFIRMACIÓN PARA ELIMINAR
-    Está oculto por defecto (display:none en CSS).
-    El JS lo muestra antes de borrar, para evitar eliminar por error.
-  -->
+  
   <div id="modal-eliminar" class="modal" style="display:none;">
     <div class="modal-contenido">
       <h3>¿Eliminar producto?</h3>
       <p>Esta acción no se puede deshacer.</p>
       <div class="modal-acciones">
         <button onclick="cerrarModal()" class="btn-secundario">Cancelar</button>
-        <!--
-          confirmarEliminar() sabe qué ID borrar porque el JS
-          lo guarda en una variable global al abrir el modal.
-        -->
+        
         <button onclick="confirmarEliminar()" class="btn-peligro">Eliminar</button>
       </div>
     </div>

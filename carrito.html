@@ -12,7 +12,7 @@
 
 <body>
 
-  <!-- ===== HEADER ===== -->
+  
   <header>
     <nav>
       <div class="nav-logo">
@@ -40,35 +40,25 @@
     </nav>
   </header>
 
-  <!-- ===== MAIN ===== -->
+  
   <main>
 
     <section class="encabezado-pagina">
       <h1>Mi Carrito</h1>
     </section>
 
-    <!--
-      LAYOUT: dos columnas.
-      Izquierda → lista de productos.
-      Derecha  → resumen y total.
-    -->
+    
     <div class="carrito-layout">
 
-      <!-- COLUMNA IZQUIERDA: PRODUCTOS EN EL CARRITO -->
+      
       <div class="carrito-items">
 
-        <!--
-          Cuando el carrito tiene productos, el JS genera una fila
-          por cada ítem y la inserta aquí.
-        -->
+        
         <div id="lista-carrito">
-          <!-- JS insertará las filas aquí -->
+          
         </div>
 
-        <!--
-          Si el localStorage está vacío, el JS oculta #lista-carrito
-          y muestra este bloque en su lugar.
-        -->
+        
         <div id="carrito-vacio" style="display:none;">
           <p>😕 Tu carrito está vacío.</p>
           <a href="productos.html" class="btn-principal">Ver productos</a>
@@ -76,31 +66,22 @@
 
       </div>
 
-      <!-- COLUMNA DERECHA: RESUMEN DEL PEDIDO -->
+      
       <div class="carrito-resumen" id="resumen-carrito">
-        <!--
-          Este bloque se oculta cuando el carrito está vacío.
-          El JS lo muestra/oculta según corresponda.
-        -->
+        
 
         <h2>Resumen del pedido</h2>
 
-        <!-- DESGLOSE -->
+        
         <div class="resumen-linea">
           <span>Subtotal</span>
-          <!--
-            El JS calcula precio × cantidad de cada ítem
-            y suma todo. Lo escribe aquí.
-          -->
+          
           <span>$<span id="subtotal">0</span></span>
         </div>
 
         <div class="resumen-linea">
           <span>Despacho</span>
-          <!--
-            Valor fijo por ahora. Más adelante puede ser
-            dinámico según región o monto del pedido.
-          -->
+          
           <span id="costo-despacho">$2.990</span>
         </div>
 
@@ -116,7 +97,7 @@
           <strong>$<span id="total">0</span></strong>
         </div>
 
-        <!-- CUPÓN DE DESCUENTO -->
+        
         <div class="cupon">
           <label for="input-cupon">¿Tienes un cupón?</label>
           <div class="cupon-fila">
@@ -125,16 +106,13 @@
               id="input-cupon"
               placeholder="Ingresa tu código"
             />
-            <!--
-              El JS valida el código contra un objeto de cupones
-              definido en carrito.js y aplica el descuento.
-            -->
+            
             <button onclick="aplicarCupon()">Aplicar</button>
           </div>
           <span id="mensaje-cupon"></span>
         </div>
 
-        <!-- BOTÓN FINALIZAR -->
+        
         <button class="btn-principal btn-checkout" onclick="finalizarCompra()">
           Finalizar compra
         </button>
@@ -147,7 +125,7 @@
 
   </main>
 
-  <!-- ===== FOOTER ===== -->
+  
   <footer>
     <div class="footer-columnas">
 

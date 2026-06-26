@@ -73,11 +73,16 @@ function validarLogin(event) {
   }
 
   if (esValido) {
-    const mensaje = document.getElementById("mensaje-login");
-    mensaje.textContent = "✅ Inicio de sesión exitoso (simulado)";
-    mensaje.style.display = "block";
-    mensaje.style.color = "#2E8B57";
-  }
+  const mensaje = document.getElementById("mensaje-login");
+  mensaje.textContent = "✅ Inicio de sesión exitoso (simulado)";
+  mensaje.style.display = "block";
+  mensaje.style.color = "#2E8B57";
+
+  setTimeout(() => {
+    document.getElementById("form-login").reset();
+    mensaje.style.display = "none";
+  }, 2500);
+}
 
   return false;
 }
@@ -129,12 +134,16 @@ function validarContacto(event) {
   }
 
   if (esValido) {
-    const mensajeOk = document.getElementById("mensaje-contacto");
-    mensajeOk.textContent = "✅ Mensaje enviado correctamente";
-    mensajeOk.style.display = "block";
-    mensajeOk.style.color = "#2E8B57";
-    document.getElementById("form-contacto").reset();
-  }
+  const mensajeOk = document.getElementById("mensaje-contacto");
+  mensajeOk.textContent = "✅ Mensaje enviado correctamente";
+  mensajeOk.style.display = "block";
+  mensajeOk.style.color = "#2E8B57";
+  document.getElementById("form-contacto").reset();
+
+  setTimeout(() => {
+    mensajeOk.style.display = "none";
+  }, 2500);
+}
 
   return false;
 }
@@ -214,12 +223,12 @@ function validarRegistro(event) {
   }
 
   if (password === "") {
-    mostrarError("error-password", "La contraseña es requerida");
-    esValido = false;
-  } else if (password.length < 6) {
-    mostrarError("error-password", "Mínimo 6 caracteres");
-    esValido = false;
-  }
+  mostrarError("error-password", "La contraseña es requerida");
+  esValido = false;
+} else if (password.length < 4 || password.length > 10) {
+  mostrarError("error-password", "Debe tener entre 4 y 10 caracteres");
+  esValido = false;
+}
 
   if (confirmarPassword !== password) {
     mostrarError("error-confirmar-password", "Las contraseñas no coinciden");
@@ -232,11 +241,16 @@ function validarRegistro(event) {
   }
 
   if (esValido) {
-    const mensaje = document.getElementById("mensaje-registro");
-    mensaje.textContent = "✅ Cuenta creada correctamente (simulado)";
-    mensaje.style.display = "block";
-    mensaje.style.color = "#2E8B57";
-  }
+  const mensaje = document.getElementById("mensaje-registro");
+  mensaje.textContent = "✅ Cuenta creada correctamente (simulado)";
+  mensaje.style.display = "block";
+  mensaje.style.color = "#2E8B57";
+
+  setTimeout(() => {
+    document.getElementById("form-registro").reset();
+    mensaje.style.display = "none";
+  }, 2500);
+}
 
   return false;
 }

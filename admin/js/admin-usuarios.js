@@ -172,12 +172,12 @@ function validarFormularioUsuarioAdmin(event) {
   }
 
   if (!idEditar && password === "") {
-    mostrarError("error-password", "La contraseña es requerida para usuarios nuevos");
-    esValido = false;
-  } else if (password !== "" && password.length < 6) {
-    mostrarError("error-password", "Mínimo 6 caracteres");
-    esValido = false;
-  }
+  mostrarError("error-password", "La contraseña es requerida para usuarios nuevos");
+  esValido = false;
+} else if (password !== "" && (password.length < 4 || password.length > 10)) {
+  mostrarError("error-password", "Debe tener entre 4 y 10 caracteres");
+  esValido = false;
+}
 
   if (!esValido) return false;
 

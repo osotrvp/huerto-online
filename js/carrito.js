@@ -184,3 +184,8 @@ document.addEventListener("DOMContentLoaded", () => {
   actualizarContadorCarrito();
   renderCarrito();
 });
+
+function toggleMenuMovil() {
+  const menu = document.querySelector(".nav-menu");
+  menu.classList.toggle("abierto");
+}

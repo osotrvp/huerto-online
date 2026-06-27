@@ -1426,3 +1426,45 @@ tbody tr:hover {
   font-size: 0.8rem;
   font-weight: 600;
 }
+
+.btn-hamburguesa {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: var(--color-texto-oscuro);
+}
+
+@media (max-width: 968px) {
+  .btn-hamburguesa {
+    display: block;
+    order: 1;
+  }
+
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--color-blanco);
+    flex-direction: column;
+    padding: 1rem 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-menu.abierto {
+  display: flex;
+  flex-direction: column;
+}
+
+  .nav-menu li {
+    padding: 0.7rem 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .nav-acciones {
+    order: 2;
+  }
+}

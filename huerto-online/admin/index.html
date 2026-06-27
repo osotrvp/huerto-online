@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel Administrador - HuertoHogar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="../css/styles.css" />
+  <script src="../js/usuarios-data.js"></script>
+  <script src="../js/auth.js"></script>
+</head>
+
+<body class="admin-body">
+  <script>protegerVistaAdmin();</script>
+
+  
+  <div class="admin-layout">
+
+    
+    <aside class="admin-sidebar">
+
+      
+      <div class="admin-logo">
+        <img src="../img/logo.png" alt="Logo HuertoHogar" />
+        <span>HuertoHogar</span>
+      </div>
+
+      
+      <nav class="admin-menu">
+        <ul>
+          <li><a href="index.html" class="activo">📊 Dashboard</a></li>
+          <li><a href="productos.html">🥦 Productos</a></li>
+          <li><a href="usuarios.html">👤 Usuarios</a></li>
+          <li><a href="../index.html">🔙 Volver al sitio</a></li>
+        </ul>
+      </nav>
+
+    </aside>
+
+    
+    <div class="admin-contenido">
+
+      
+      <header class="admin-header">
+        <h1>Dashboard</h1>
+        <div class="admin-usuario">
+          <span id="admin-nombre-activo">👋 Hola, Admin</span>
+          <button onclick="cerrarSesion()" class="btn-secundario">Cerrar sesión</button>
+        </div>
+      </header>
+
+      
+      <main class="admin-main">
+
+        
+        <section class="admin-cards-resumen">
+
+          <div class="admin-card">
+            <span class="admin-card-icono">🥦</span>
+            <div>
+              
+              <strong id="total-productos">0</strong>
+              <p>Productos totales</p>
+            </div>
+          </div>
+
+          <div class="admin-card">
+            <span class="admin-card-icono">👤</span>
+            <div>
+              <strong id="total-usuarios">0</strong>
+              <p>Usuarios registrados</p>
+            </div>
+          </div>
+
+          <div class="admin-card">
+            <span class="admin-card-icono">⚠️</span>
+            <div>
+              
+              <strong id="stock-bajo">0</strong>
+              <p>Productos con stock bajo</p>
+            </div>
+          </div>
+
+          <div class="admin-card">
+            <span class="admin-card-icono">📦</span>
+            <div>
+              <strong id="total-categorias">0</strong>
+              <p>Categorías activas</p>
+            </div>
+          </div>
+
+        </section>
+
+        
+        <section class="admin-tabla-resumen">
+          <h2>Últimos productos agregados</h2>
+
+          <table>
+            <thead>
+              <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Categoría</th>
+                <th>Precio</th>
+                <th>Stock</th>
+              </tr>
+            </thead>
+            
+            <tbody id="tabla-ultimos-productos">
+              
+            </tbody>
+          </table>
+
+          <a href="productos.html" class="btn-secundario">Ver todos los productos →</a>
+        </section>
+
+      </main>
+
+    </div>
+
+  </div>
+
+
+  <script src="../js/productos.js"></script>
+  <script src="js/admin-usuarios.js"></script>
+  <script src="js/admin-dashboard.js"></script>
+
+</body>
+</html>

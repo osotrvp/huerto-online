@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HuertoHogar - Productos del Campo</title>
+
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+
+  
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  
+  <header>
+    <nav>
+      
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="img/logo.png" alt="Logo HuertoHogar" />
+          <span>HuertoHogar</span>
+        </a>
+      </div>
+
+      
+      <button class="btn-hamburguesa" onclick="toggleMenuMovil()">☰</button>
+<ul class="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blogs.html">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      
+      <div class="nav-acciones">
+        <a href="login.html">Iniciar sesión</a>
+        <a href="registro.html">Registrarse</a>
+        <a href="carrito.html">
+          🛒 <span id="contador-carrito">0</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  
+  <main>
+
+    
+    <section class="hero">
+      <div class="hero-contenido">
+        <h1>Del campo a tu mesa</h1>
+        <p>Productos orgánicos frescos, cultivados con amor y entregados directamente a tu hogar.</p>
+        <a href="productos.html">Ver productos</a>
+      </div>
+    </section>
+
+    
+    <section class="productos-destacados">
+      <h2>Productos Destacados</h2>
+      <p>Lo mejor de nuestra temporada</p>
+
+      
+      <div id="contenedor-productos-destacados">
+        
+      </div>
+
+      <a href="productos.html">Ver todos los productos</a>
+    </section>
+
+    
+    <section class="por-que-elegirnos">
+      <h2>¿Por qué elegirnos?</h2>
+
+      <div class="beneficios">
+
+        <div class="beneficio">
+          <span>🌱</span>
+          <h3>100% Orgánico</h3>
+          <p>Sin pesticidas ni químicos. Cultivado de forma natural y sostenible.</p>
+        </div>
+
+        <div class="beneficio">
+          <span>🚚</span>
+          <h3>Envío a domicilio</h3>
+          <p>Llevamos tu pedido directamente a tu puerta en todo Chile.</p>
+        </div>
+
+        <div class="beneficio">
+          <span>🤝</span>
+          <h3>Apoyo local</h3>
+          <p>Trabajamos con agricultores locales de la Región Metropolitana.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  
+  <footer>
+    <div class="footer-columnas">
+
+      <div class="footer-col">
+        <h4>HuertoHogar</h4>
+        <p>Conectamos el campo con tu hogar. Productos frescos y orgánicos para tu familia.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blogs.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p>📍 Santiago, Chile</p>
+        <p>📞 +56 9 1234 5678</p>
+        <p>✉️ contacto@huerthogar.cl</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 HuertoHogar. Todos los derechos reservados. | <a href="admin/index.html">Panel Administrador</a></p>
+    </div>
+  </footer>
+
+  
+  <script src="js/productos.js"></script>
+  <script src="js/carrito.js"></script>
+
+</body>
+</html>

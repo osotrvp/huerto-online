@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Artículo - HuertoHogar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  
+  <header>
+    <nav>
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="img/logo.png" alt="Logo HuertoHogar" />
+          <span>HuertoHogar</span>
+        </a>
+      </div>
+
+      <button class="btn-hamburguesa" onclick="toggleMenuMovil()">☰</button>
+<ul class="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blogs.html" class="activo">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <div class="nav-acciones">
+        <a href="login.html">Iniciar sesión</a>
+        <a href="registro.html">Registrarse</a>
+        <a href="carrito.html">
+          🛒 <span id="contador-carrito">0</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  
+  <main>
+
+    
+    <nav class="breadcrumb">
+      <a href="index.html">Inicio</a>
+      <span> / </span>
+      <a href="blogs.html">Blog</a>
+      <span> / </span>
+      
+      <span id="breadcrumb-titulo">Cargando...</span>
+    </nav>
+
+    
+    <div class="detalle-blog-layout">
+
+      
+      <article class="articulo-completo">
+
+        
+        <img id="blog-imagen" src="" alt="Imagen del artículo" class="blog-imagen-portada" />
+
+        
+        <div class="blog-meta">
+          
+          <span id="blog-categoria" class="etiqueta-categoria"></span>
+          <span id="blog-autor">✍️ </span>
+          <span id="blog-fecha">📅 </span>
+        </div>
+
+        
+        <h1 id="blog-titulo"></h1>
+
+        
+        <p id="blog-resumen" class="blog-bajada"></p>
+
+        
+        
+        <div id="blog-contenido"></div>
+
+        
+        <div class="blog-etiquetas">
+          <strong>Etiquetas:</strong>
+          
+          <div id="blog-tags"></div>
+        </div>
+
+        
+        <div class="blog-navegacion">
+          
+          <div id="blog-anterior">
+            
+          </div>
+          <div id="blog-siguiente">
+            
+          </div>
+        </div>
+
+        <a href="blogs.html" class="btn-volver">← Volver al Blog</a>
+
+      </article>
+
+      
+      <aside class="blog-sidebar">
+
+        
+        <div class="sidebar-bloque">
+          <h3>Artículos recientes</h3>
+          
+          <ul id="sidebar-recientes">
+            
+          </ul>
+        </div>
+
+        
+        <div class="sidebar-bloque">
+          <h3>Categorías</h3>
+          <ul class="sidebar-categorias">
+            <li><a href="blogs.html?categoria=recetas">🍽️ Recetas</a></li>
+            <li><a href="blogs.html?categoria=consejos">💡 Consejos</a></li>
+            <li><a href="blogs.html?categoria=noticias">📰 Noticias</a></li>
+            <li><a href="blogs.html?categoria=agricultura">🌾 Agricultura</a></li>
+          </ul>
+        </div>
+
+        
+        <div class="sidebar-bloque sidebar-cta">
+          <h3>¿Listo para comprar?</h3>
+          <p>Explora nuestro catálogo de productos orgánicos frescos.</p>
+          <a href="productos.html" class="btn-principal">Ver productos</a>
+        </div>
+
+      </aside>
+
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <div class="footer-columnas">
+
+      <div class="footer-col">
+        <h4>HuertoHogar</h4>
+        <p>Conectamos el campo con tu hogar. Productos frescos y orgánicos para tu familia.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blogs.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p>📍 Santiago, Chile</p>
+        <p>📞 +56 9 1234 5678</p>
+        <p>✉️ contacto@huerthogar.cl</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 HuertoHogar. Todos los derechos reservados. | <a href="admin/index.html">Panel Administrador</a></p>
+    </div>
+  </footer>
+
+  <script src="js/blogs.js"></script>
+  <script src="js/carrito.js"></script>
+
+</body>
+</html>

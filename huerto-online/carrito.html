@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrito - HuertoHogar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  
+  <header>
+    <nav>
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="img/logo.png" alt="Logo HuertoHogar" />
+          <span>HuertoHogar</span>
+        </a>
+      </div>
+
+      <button class="btn-hamburguesa" onclick="toggleMenuMovil()">☰</button>
+<ul class="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blogs.html">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <div class="nav-acciones">
+        <a href="login.html">Iniciar sesión</a>
+        <a href="registro.html">Registrarse</a>
+        <a href="carrito.html" class="activo">
+          🛒 <span id="contador-carrito">0</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  
+  <main>
+
+    <section class="encabezado-pagina">
+      <h1>Mi Carrito</h1>
+    </section>
+
+    
+    <div class="carrito-layout">
+
+      
+      <div class="carrito-items">
+
+        
+        <div id="lista-carrito">
+          
+        </div>
+
+        
+        <div id="carrito-vacio" style="display:none;">
+          <p>😕 Tu carrito está vacío.</p>
+          <a href="productos.html" class="btn-principal">Ver productos</a>
+        </div>
+
+      </div>
+
+      
+      <div class="carrito-resumen" id="resumen-carrito">
+        
+
+        <h2>Resumen del pedido</h2>
+
+        
+        <div class="resumen-linea">
+          <span>Subtotal</span>
+          
+          <span>$<span id="subtotal">0</span></span>
+        </div>
+
+        <div class="resumen-linea">
+          <span>Despacho</span>
+          
+          <span id="costo-despacho">$2.990</span>
+        </div>
+
+        <div class="resumen-linea resumen-linea--descuento" id="fila-descuento" style="display:none;">
+          <span>Descuento</span>
+          <span>-$<span id="valor-descuento">0</span></span>
+        </div>
+
+        <hr />
+
+        <div class="resumen-linea resumen-total">
+          <strong>Total</strong>
+          <strong>$<span id="total">0</span></strong>
+        </div>
+
+        
+        <div class="cupon">
+          <label for="input-cupon">¿Tienes un cupón?</label>
+          <div class="cupon-fila">
+            <input
+              type="text"
+              id="input-cupon"
+              placeholder="Ingresa tu código"
+            />
+            
+            <button onclick="aplicarCupon()">Aplicar</button>
+          </div>
+          <span id="mensaje-cupon"></span>
+        </div>
+
+        
+        <button class="btn-principal btn-checkout" onclick="finalizarCompra()">
+          Finalizar compra
+        </button>
+
+        <a href="productos.html" class="btn-volver">← Seguir comprando</a>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  
+  <footer>
+    <div class="footer-columnas">
+
+      <div class="footer-col">
+        <h4>HuertoHogar</h4>
+        <p>Conectamos el campo con tu hogar. Productos frescos y orgánicos para tu familia.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blogs.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p>📍 Santiago, Chile</p>
+        <p>📞 +56 9 1234 5678</p>
+        <p>✉️ contacto@huerthogar.cl</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 HuertoHogar. Todos los derechos reservados. | <a href="admin/index.html">Panel Administrador</a></p>
+    </div>
+  </footer>
+
+  <script src="js/productos.js"></script>
+  <script src="js/carrito.js"></script>
+
+</body>
+</html>

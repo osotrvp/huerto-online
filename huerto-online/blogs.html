@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog - HuertoHogar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  
+  <header>
+    <nav>
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="img/logo.png" alt="Logo HuertoHogar" />
+          <span>HuertoHogar</span>
+        </a>
+      </div>
+
+      <button class="btn-hamburguesa" onclick="toggleMenuMovil()">☰</button>
+<ul class="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blogs.html" class="activo">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <div class="nav-acciones">
+        <a href="login.html">Iniciar sesión</a>
+        <a href="registro.html">Registrarse</a>
+        <a href="carrito.html">
+          🛒 <span id="contador-carrito">0</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  
+  <main>
+
+    
+    <section class="encabezado-pagina">
+      <h1>Blog</h1>
+      <p>Consejos, recetas y noticias del mundo orgánico</p>
+    </section>
+
+    
+    <section class="filtros">
+      
+      <button class="btn-filtro activo" data-categoria="todos">Todos</button>
+      <button class="btn-filtro" data-categoria="recetas">Recetas</button>
+      <button class="btn-filtro" data-categoria="consejos">Consejos</button>
+      <button class="btn-filtro" data-categoria="noticias">Noticias</button>
+      <button class="btn-filtro" data-categoria="agricultura">Agricultura</button>
+    </section>
+
+    
+    
+    <section class="blog-destacado">
+      <div id="articulo-destacado">
+        
+      </div>
+    </section>
+
+    
+    <section class="blog-grilla">
+      <h2>Artículos recientes</h2>
+
+      
+      <div id="contenedor-blogs">
+        
+      </div>
+
+      <p id="mensaje-vacio-blog" style="display:none;">
+        No hay artículos en esta categoría.
+      </p>
+    </section>
+
+  </main>
+
+  
+  <footer>
+    <div class="footer-columnas">
+
+      <div class="footer-col">
+        <h4>HuertoHogar</h4>
+        <p>Conectamos el campo con tu hogar. Productos frescos y orgánicos para tu familia.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blogs.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p>📍 Santiago, Chile</p>
+        <p>📞 +56 9 1234 5678</p>
+        <p>✉️ contacto@huerthogar.cl</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 HuertoHogar. Todos los derechos reservados. | <a href="admin/index.html">Panel Administrador</a></p>
+    </div>
+  </footer>
+
+  
+  <script src="js/blogs.js"></script>
+  <script src="js/carrito.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar Sesión - HuertoHogar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+  
+  <header>
+    <nav>
+      <div class="nav-logo">
+        <a href="index.html">
+          <img src="img/logo.png" alt="Logo HuertoHogar" />
+          <span>HuertoHogar</span>
+        </a>
+      </div>
+
+      <button class="btn-hamburguesa" onclick="toggleMenuMovil()">☰</button>
+<ul class="nav-menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="blogs.html">Blog</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+
+      <div class="nav-acciones">
+        <a href="login.html" class="activo">Iniciar sesión</a>
+        <a href="registro.html">Registrarse</a>
+        <a href="carrito.html">
+          🛒 <span id="contador-carrito">0</span>
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  
+  <main>
+
+    <section class="seccion-formulario">
+
+      <div class="caja-formulario">
+
+        <h1>Iniciar Sesión</h1>
+        <p>¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a></p>
+
+        
+        <form id="form-login" onsubmit="return validarLogin(event)">
+
+          
+          <div class="campo">
+            <label for="email">Correo electrónico</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              placeholder="correo@ejemplo.cl"
+            />
+            
+            <span class="error" id="error-email"></span>
+          </div>
+
+          
+          <div class="campo">
+            <label for="password">Contraseña</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Tu contraseña"
+            />
+            <span class="error" id="error-password"></span>
+          </div>
+
+          
+          <div class="campo campo-check">
+            <input type="checkbox" id="recordar" name="recordar" />
+            <label for="recordar">Recordar mi sesión</label>
+          </div>
+
+          
+          <button type="submit" class="btn-principal">
+            Iniciar Sesión
+          </button>
+
+          
+          <p id="mensaje-login" style="display:none;"></p>
+
+        </form>
+
+        <p class="link-secundario">
+          <a href="#">¿Olvidaste tu contraseña?</a>
+        </p>
+
+        <p class="link-secundario" style="font-size:0.85rem; opacity:0.8;">
+          Acceso de prueba administrador: <strong>oscar.leiva@inacapmail.cl</strong> / <strong>admin123</strong>
+        </p>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  
+  <footer>
+    <div class="footer-columnas">
+
+      <div class="footer-col">
+        <h4>HuertoHogar</h4>
+        <p>Conectamos el campo con tu hogar. Productos frescos y orgánicos para tu familia.</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Navegación</h4>
+        <ul>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="productos.html">Productos</a></li>
+          <li><a href="nosotros.html">Nosotros</a></li>
+          <li><a href="blogs.html">Blog</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contacto</h4>
+        <p>📍 Santiago, Chile</p>
+        <p>📞 +56 9 1234 5678</p>
+        <p>✉️ contacto@huerthogar.cl</p>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2025 HuertoHogar. Todos los derechos reservados. | <a href="admin/index.html">Panel Administrador</a></p>
+    </div>
+  </footer>
+
+  <script src="js/usuarios-data.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/validaciones.js"></script>
+  <script src="js/carrito.js"></script>
+
+</body>
+</html>

@@ -1468,3 +1468,13 @@ tbody tr:hover {
     order: 2;
   }
 }
+
+.nav-menu-sesion {
+  display: none;
+}
+
+@media (max-width: 968px) {
+  .nav-menu-sesion {
+    display: block;
+  }
+}

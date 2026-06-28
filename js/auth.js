@@ -35,6 +35,8 @@ function protegerVistaAdmin() {
 function actualizarNavbarSegunSesion() {
   const sesion = obtenerSesion();
   const acciones = document.querySelector(".nav-acciones");
+  const itemsSesionMovil = document.querySelectorAll(".nav-menu-sesion");
+
   if (!acciones) return;
 
   if (sesion) {
@@ -44,6 +46,13 @@ function actualizarNavbarSegunSesion() {
       <a href="carrito.html">🛒 <span id="contador-carrito">0</span></a>
     `;
     actualizarContadorCarrito();
+
+    itemsSesionMovil.forEach(item => {
+      item.innerHTML = "";
+    });
+    if (itemsSesionMovil[0]) {
+      itemsSesionMovil[0].innerHTML = `<a href="#" onclick="cerrarSesion(); return false;">Cerrar sesión</a>`;
+    }
   }
 }
 

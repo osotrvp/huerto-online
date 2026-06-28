@@ -31,7 +31,7 @@
           <li><a href="index.html" class="activo">📊 Dashboard</a></li>
           <li><a href="productos.html">🥦 Productos</a></li>
           <li><a href="usuarios.html">👤 Usuarios</a></li>
-          <li><a href="../index.html">🔙 Volver al sitio</a></li>
+          <li><a href="#" onclick="cerrarSesion(); return false;">🚪 Cerrar sesión</a></li>
         </ul>
       </nav>
 
@@ -44,7 +44,7 @@
       <header class="admin-header">
         <h1>Dashboard</h1>
         <div class="admin-usuario">
-          <span>👋 Hola, Admin</span>
+          <span id="admin-nombre-activo">👋 Hola, Admin</span>
         </div>
       </header>
 
@@ -123,6 +123,8 @@
   <script src="../js/productos.js"></script>
   <script src="js/admin-usuarios.js"></script>
   <script src="js/admin-dashboard.js"></script>
+  <script src="../js/usuarios-data.js"></script>
+  <script src="../js/auth.js"></script>
 
 </body>
 </html>

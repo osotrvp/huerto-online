@@ -43,7 +43,7 @@ function validarRut(rutSinFormato) {
   return dv === dvCalculado;
 }
 
-function validarLogin(event) {
+async function validarLogin(event) {
   event.preventDefault();
   let esValido = true;
 
@@ -72,17 +72,31 @@ function validarLogin(event) {
     esValido = false;
   }
 
-  if (esValido) {
+  if (!esValido) return false;
+
   const mensaje = document.getElementById("mensaje-login");
-  mensaje.textContent = "✅ Inicio de sesión exitoso (simulado)";
+  const usuario = await buscarUsuarioPorCredenciales(email, password);
+
+  if (!usuario) {
+    mensaje.textContent = "❌ Correo o contraseña incorrectos";
+    mensaje.style.display = "block";
+    mensaje.style.color = "#c0392b";
+    return false;
+  }
+
+  iniciarSesion(usuario);
+
+  mensaje.textContent = `✅ Bienvenido/a, ${usuario.nombre}. Redirigiendo...`;
   mensaje.style.display = "block";
   mensaje.style.color = "#2E8B57";
 
+  const destino = (usuario.rol === "admin" || usuario.rol === "vendedor")
+    ? "admin/index.html"
+    : "index.html";
+
   setTimeout(() => {
-    document.getElementById("form-login").reset();
-    mensaje.style.display = "none";
-  }, 2500);
-}
+    window.location.href = destino;
+  }, 1200);
 
   return false;
 }
@@ -147,8 +161,7 @@ function validarContacto(event) {
 
   return false;
 }
-
-function validarRegistro(event) {
+async function validarRegistro(event) {
   event.preventDefault();
   let esValido = true;
 
@@ -241,16 +254,33 @@ function validarRegistro(event) {
   }
 
   if (esValido) {
+  if (existeCorreoUsuario(email)) {
+    mostrarError("error-email", "Ya existe una cuenta con este correo");
+    return false;
+  }
+
+  await agregarUsuario({
+    nombre,
+    apellido,
+    rut,
+    email,
+    password,
+    telefono: "",
+    region,
+    comuna,
+    direccion,
+    rol: "cliente",
+    estado: "activo",
+    fechaRegistro: new Date().toISOString().slice(0, 10)
+  });
+
   const mensaje = document.getElementById("mensaje-registro");
-  mensaje.textContent = "✅ Cuenta creada correctamente (simulado)";
+  mensaje.textContent = "✅ Cuenta creada correctamente. Ya puedes iniciar sesión.";
   mensaje.style.display = "block";
   mensaje.style.color = "#2E8B57";
 
   setTimeout(() => {
-    document.getElementById("form-registro").reset();
-    mensaje.style.display = "none";
-  }, 2500);
-}
-
-  return false;
+    window.location.href = "login.html";
+  }, 1800);
+  }
 }
